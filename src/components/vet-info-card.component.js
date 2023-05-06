@@ -3,7 +3,7 @@ import { SvgXml } from "react-native-svg";
 import close from "../../assets/close";
 import open from "../../assets/open";
 import star from "../../assets/star";
-
+import { FavouriteComponent } from "./favourite.component";
 import { Text } from "../theme/typography";
 import {
   VetCard,
@@ -21,7 +21,8 @@ export const VetInfoCardComponent = ({ vet }) => {
 
   return (
     <VetCard elevation={5}>
-      <VetCardCover key={vet.name} source={{ uri: vet.photo }} />
+            <FavouriteComponent vet={vet} />
+              <VetCardCover key={vet.name} source={{ uri: vet.photo }} />
       <Info>
         <Text variant="label">{vet.name}</Text>
         <Details>

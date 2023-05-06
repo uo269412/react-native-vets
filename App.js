@@ -13,6 +13,7 @@ import { theme } from "./src/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { AuthenticationContextProvider } from "./src/services/authentication.context";
 import { AppNavigator } from "./src/navigators/app.navigator";
+
 export const Navigator = () => {
   return (
     <NavigationContainer>
@@ -40,8 +41,8 @@ export default function App() {
           <Navigator />
         </AuthenticationContextProvider>
       </ThemeProvider>
-
       <ExpoStatusBar style="auto" />
     </>
   );
+
 }

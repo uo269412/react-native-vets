@@ -1,6 +1,8 @@
-import { ActivityIndicator } from "react-native-paper";
+import { ActivityIndicator, Button } from "react-native-paper";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
+import { TouchableOpacity } from "react-native";
+import { WebView } from "react-native-webview";
 
 import { colors } from "./colors";
 import { sizes } from "./sizes";
@@ -59,3 +61,55 @@ export const VetCardCover = styled(Card.Cover)`
   background-color: ${(props) => props.theme.colors.card};
   padding: ${(props) => props.theme.space[3]};
 `;
+
+export const FavouriteButton = styled(TouchableOpacity)`
+  position: absolute;
+  top: ${(props) => props.theme.space[4]};
+  right: ${(props) => props.theme.space[4]};
+  z-index: 1;
+`;
+
+export const CompactWebview = styled(WebView)`
+  width: 110px;
+  height: 110px;
+  border-radius: 5px;
+`;
+
+export const FavouritesWrapper = styled.View`
+  padding: ${(props) => props.theme.space[2]};
+`;
+
+export const Item = styled.View`
+  width: ${(props) => props.theme.space[6]};
+  height: ${(props) => props.theme.space[6]};
+  padding: ${(props) => props.theme.space[1]};
+  margin-right: ${(props) => props.theme.space[1]};
+  align-items: center;
+`;
+
+export const ButtonsSpace = styled.View`
+  justify-content: center;
+  flex-direction: row;
+  padding: ${(props) => props.theme.space[1]};
+`;
+
+export const ContactButton = styled(Button).attrs({
+  buttonColor: colors.button,
+  textColor: colors.textButton,
+})`
+  padding: ${(props) => props.theme.space[0]};
+  margin: ${(props) => props.theme.space[1]};
+`;
+
+export const SearchContainer = styled.View`
+  padding: ${(props) => props.theme.space[3]};
+`;
+
+export const Map = styled(MapView)`
+  height: 100%;
+  width: 100%;
+`;
+
+
+
+
