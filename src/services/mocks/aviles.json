@@ -4,7 +4,7 @@
       "place_id": "A1",
       "location": {
         "lat": 43.56103270072599,
-        "lng": -5.925565771037505, 
+        "lng": -5.925565771037505
       },
       "name": "Sabuvet",
       "open_now": true,        
@@ -20,7 +20,7 @@
       "place_id": "A2",
       "location": {
         "lat": 43.55149539818053,
-        "lng": -5.918803057573454, 
+        "lng": -5.918803057573454 
       },
       "name": "Centro Veterinario Wecan La Villa",
       "open_now": true,        
@@ -36,7 +36,7 @@
       "place_id": "A3",
       "location": {
         "lat": 43.55521903274759,
-        "lng": -5.927681290913939, 
+        "lng": -5.927681290913939 
       },
       "name": "Clínica Veterinaria Avilesina",
       "open_now": true,        
@@ -52,7 +52,7 @@
       "place_id": "A4",
       "location": {
         "lat": 43.54530566413898,
-        "lng": -5.909510501751853, 
+        "lng": -5.909510501751853 
       },
       "name": "Centro Veterinario El Carmen",
       "open_now": false,        
@@ -68,7 +68,7 @@
       "place_id": "A5",
       "location": {
         "lat": 43.55935376569236,
-        "lng": -5.929722671681202, 
+        "lng": -5.929722671681202 
       },
       "name": "Clínica Veterinaria Guau",
       "open_now": true,        
@@ -79,6 +79,6 @@
       "email": "generic_email@gmail.com",
       "phone": "666666666",
       "web_site": "https://www.google.com"
-    },
-  ],
+    }
+  ]
 }

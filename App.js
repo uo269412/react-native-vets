@@ -1,5 +1,7 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components";
+import { AuthenticationContextProvider } from "./src/services/authentication.context";
+import { Navigator } from "./src/navigators";
 import {
   useFonts as useNunito,
   Nunito_400Regular,
@@ -10,17 +12,6 @@ import {
 } from "@expo-google-fonts/roboto-mono";
 
 import { theme } from "./src/theme";
-import { NavigationContainer } from "@react-navigation/native";
-import { AuthenticationContextProvider } from "./src/services/authentication.context";
-import { AppNavigator } from "./src/navigators/app.navigator";
-
-export const Navigator = () => {
-  return (
-    <NavigationContainer>
-      <AppNavigator />
-    </NavigationContainer>
-  );
-};
 
 export default function App() {
   const [nunitoLoaded] = useNunito({
@@ -41,8 +32,9 @@ export default function App() {
           <Navigator />
         </AuthenticationContextProvider>
       </ThemeProvider>
+
+      <ThemeProvider theme={theme} />
       <ExpoStatusBar style="auto" />
     </>
   );
-
 }

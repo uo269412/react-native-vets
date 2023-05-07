@@ -4,7 +4,7 @@
       "place_id": "G1",
       "location": {
         "lat": 43.542961830696164,
-        "lng": -5.668852532168355, 
+        "lng": -5.668852532168355 
       },
       "name": "Centro Veterinario San Esteban",
       "open_now": true,        
@@ -20,7 +20,7 @@
       "place_id": "G2",
       "location": {
         "lat": 43.53885549677764,
-        "lng": -5.6700541617614935, 
+        "lng": -5.6700541617614935 
       },
       "name": "Centro Veterinario San Lorenzo",
       "open_now": true,        
@@ -36,7 +36,7 @@
       "place_id": "G3",
       "location": {
         "lat": 43.53729999423001,
-        "lng": -5.651257241697397, 
+        "lng": -5.651257241697397 
       },
       "name": "Hospital Veterinario Asturias",
       "open_now": true,        
@@ -52,7 +52,7 @@
       "place_id": "G4",
       "location": {
         "lat": 43.534251092833784,
-        "lng": -5.659411156793694, 
+        "lng": -5.659411156793694 
       },
       "name": "Clínica Veterinaria M&D",
       "open_now": false,        
@@ -68,7 +68,7 @@
       "place_id": "G5",
       "location": {
         "lat": 43.52802836676549,
-        "lng": -5.649454797307689, 
+        "lng": -5.649454797307689 
       },
       "name": "Hospital Veterinario Menes",
       "open_now": true,        
@@ -79,6 +79,6 @@
       "email": "generic_email@gmail.com",
       "phone": "666666666",
       "web_site": "https://www.google.com"
-    },
-  ],
+    }
+  ]
 }
