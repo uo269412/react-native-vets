@@ -1,19 +1,34 @@
 export const loginRequest = (email, password) => {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
-        if (email === "a" && password === "a") {
-          resolve({
-            uid: 1,
-            email: "user1@email.com",
+        fetch('http://192.168.0.20:8000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password
+          })
+        })
+          .then(response => {
+            if (response.status === 200) {
+              response.json().then(data => {
+                resolve({
+                  uid: 1,
+                  email: email,
+                  token: data.token
+                });
+              });
+            } else if (response.status === 400) {
+              reject("Wrong email and/or password");
+            } else {
+              reject("Error logging in");
+            }
+          })
+          .catch(error => {
+            reject("Error con la petición");
           });
-        } else if (email === "b" && password === "b") {
-          resolve({
-            uid: 2,
-            email: "user2@email.com",
-          });
-        } else {
-          reject("Wrong email and/or password");
-        }
       }, 1000);
     });
   };
@@ -21,11 +36,28 @@ export const loginRequest = (email, password) => {
   export const createUserRequest = (email, password) => {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
-        if (email === "b" && password === "b") {
-          resolve("User created!");
-        } else {
-          reject("Email already registered");
-        }
+        fetch('http://192.168.0.20:8000/signUp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password
+          })
+        })
+          .then(response => {
+            if (response.status === 201) {
+              resolve("user");
+            } else if (response.status === 400) {
+              reject("Email already registered");
+            } else {
+              reject("Error signing up");
+            }
+          })
+          .catch(error => {
+            reject("Error con la petición");
+          });
       }, 1000);
     });
   };
