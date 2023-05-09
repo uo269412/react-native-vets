@@ -15,7 +15,6 @@ export const loginRequest = (email, password) => {
             if (response.status === 200) {
               response.json().then(data => {
                 resolve({
-                  uid: 1,
                   email: email,
                   token: data.token
                 });
