@@ -1,7 +1,7 @@
 export const loginRequest = (email, password) => {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
-        fetch('http://192.168.0.20:8000/login', {
+        fetch('http://dvnkcloafu.eu11.qoddiapp.com/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export const loginRequest = (email, password) => {
   export const createUserRequest = (email, password) => {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
-        fetch('http://192.168.0.20:8000/signUp', {
+        fetch('http://dvnkcloafu.eu11.qoddiapp.com/signUp', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
